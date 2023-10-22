@@ -9,7 +9,7 @@ app.use(express.static('../Client'))
 const db = mysql.createPool({
     host: 'localhost',
     user: 'root',
-    password: 'localpassword1',
+    password: '*****',
     database: 'user_app',
 })
 
