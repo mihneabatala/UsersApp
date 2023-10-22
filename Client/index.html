@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>users</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>User App</h1>
+
+    <div class="container">
+
+        <div class="content">
+            <h2>Insert User</h2>
+            <form id="user-form">
+                <label for="user-name">Name</label>
+                <input type="text" id="user-name" placeholder="e.g. Sonny Edward" required maxlength="50">
+    
+                <label for="user-email">Email</label>
+                <input type="email" id="user-email" placeholder="e.g. name@gmail.com" required maxlength="100">
+    
+                <label for="user-age">Age (Max:100)</label>
+                <input type="number" id="user-age" max="100" placeholder="e.g. 25" required>
+                
+                <div class="user-gender">
+                    <p>Gender (M/F)</p>
+                    <div class="gender-data">
+                        <div class="gender-M">
+                            <label for="user-M">M</label>
+                            <input type="radio" id="user-M" name="user-gender" value="M">  
+                        </div>
+                        
+                        <div class="gender-F">
+                            <label for="user-F">F</label>
+                        <input type="radio" id="user-F" name="user-gender" value="F">  
+                        </div>
+                        
+                        
+                    </div>
+
+                </div>
+                
+    
+                <button type="submit">Add User</button>
+            </form>
+        </div>
+    
+        
+    
+        <div class="users">
+
+            <div class="top-database">
+                <p>All Users</p>
+                <button id="refresh" class="refresh">Refresh</button>
+            </div>
+            
+            <table class="table-database">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+    
+                <tbody class="users-info">
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content">
+            <h2>Update User</h2>
+            <form id="update-form">
+                <label for="username">Choose user to update by name:</label>
+                <input type="text" id="username" placeholder="e.g. Sonny Edward" required maxlength="50">
+    
+                <label for="update-email">Email</label>
+                <input type="email" id="update-email" placeholder="e.g. name@gmail.com" required maxlength="100">
+    
+                <label for="update-age">Age (Max:100)</label>
+                <input type="number" id="update-age" max="100" placeholder="e.g. 25" required>
+    
+                <div class="user-gender">
+                    <p>Gender (M/F)</p>
+                    <div class="gender-data">
+                        <div class="gender-M">
+                            <label for="gender-M">M</label>
+                            <input type="radio" id="gender-M" name="user-gender" value="M">  
+                        </div>
+                        
+                        <div class="gender-F">
+                            <label for="gender-F">F</label>
+                        <input type="radio" id="gender-F" name="user-gender" value="F">  
+                        </div>
+                        
+                        
+                    </div>
+
+                </div>
+
+                <button type="submit">Update User</button>
+            </form>
+        </div>
+
+        <div class="content delete">
+            <h2>Delete User</h2>
+            
+            <form id="delete-form">
+                <label for="username-delete">Choose user to delete by name:</label>
+                <input type="text" id="username-delete" placeholder="e.g. Sonny Edward" required maxlength="50">
+
+                <button type="submit">Delete User</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="front-index.js"></script>
+</body>
+</html>
