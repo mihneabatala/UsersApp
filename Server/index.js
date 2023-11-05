@@ -1,16 +1,17 @@
 const express = require('express');
 const app = express();
 const mysql = require('mysql2');
+require('dotenv').config();
 
 app.use(express.json());
 
 app.use(express.static('../Client'))
 
 const db = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: 'localpassword1',
-    database: 'user_app',
+    host: process.env.host,
+    user: process.env.user,
+    password: process.env.password,
+    database: process.env.database,
 })
 
 app.listen(3000, () =>{
@@ -32,7 +33,7 @@ app.post('/insert', (req,res) =>{
         
         if(userCount > 0){
             return res.status(400).json({status:'error-user', message: 'User with this name already exists, write another!'})
-        }
+        } 
 
         const sqlInsert = "INSERT INTO users (Name, Email, Age, Gender) VALUES (?, ?, ?, ?) ;";
         db.query(sqlInsert,[name,email,age,gender], (err,result) =>{
