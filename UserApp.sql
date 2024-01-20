@@ -38,7 +38,6 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (40,'john cena','johncena@yahoo.com',21,'M'),(42,'ela','elenabatala@yahoo.co.uk',22,'F'),(44,'miruna','elenabatala@yahoo.co.uk',26,'F'),(48,'guitar','mihneabatala@yahoo.com',23,'F'),(50,'hope','mihneabatala@yahoo.com',22,'F'),(53,'sonny','mihneabatala@yahoo.com',12,'F'),(54,'skrilex','elenabatala@yahoo.co.uk',43,'M'),(66,'weekend','week@yahoo.com',32,'M'),(71,'mihnea','mihneabatala@yahoo.com',21,'M');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
